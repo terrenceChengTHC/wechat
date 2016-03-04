@@ -3,7 +3,7 @@ var url = require("url");
 var crypto = require("crypto");
 var router = express.Router();
 
-/* GET home page. */
+/* 验证接入微信公众号 */
 router.get('/', function(req, res, next) {
   console.log('index');
   var query = url.parse(req.url,true).query;
@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
   var oriArray = new Array();
   oriArray[0] = nonce;
   oriArray[1] = timestamp;
-  oriArray[2] = "8218ac8d070a354";//这里是你在微信开发者中心页面里填的token，而不是****
+  oriArray[2] = "8218ac8d070a354";//这里是你在微信开发者中心页面里填的token
   oriArray.sort();
   var original = oriArray.join('');
   console.log("Original str : " + original);
