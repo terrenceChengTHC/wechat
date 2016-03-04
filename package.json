@@ -15,6 +15,7 @@
     "serve-favicon": "~2.3.0",
     "wechat-api":"1.25.1",
     "wechat-oauth":"1.1.1",
-    "redis": "^0.12.1"
+    "redis": "^0.12.1",
+    "mongoose": "^4.0.1"
   }
 }
