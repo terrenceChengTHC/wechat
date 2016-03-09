@@ -41,7 +41,11 @@
     <!-- /.sidebar-shortcuts -->
 
     <ul class="nav nav-list">
+        <% if (target=='manage') { %>
         <li class="active">
+        <% }else{ %>
+        <li class="">
+        <% } %>
             <a href="manage">
                 <i class="menu-icon fa fa-tachometer"></i>
                 <span class="menu-text"> 平台信息 </span>
@@ -49,7 +53,11 @@
             <b class="arrow"></b>
         </li>
 
+        <% if (target=='customMenu') { %>
+        <li class="open">
+        <% }else{ %>
         <li class="">
+        <% } %>
             <a href="#" class="dropdown-toggle">
                 <i class="menu-icon fa fa-list"></i>
                 <span class="menu-text"> 基本功能 </span>
@@ -75,8 +83,12 @@
 
                     <b class="arrow"></b>
                 </li>
+                <% if (target=='customMenu') { %>
+                <li class="active">
+                <% }else{ %>
                 <li class="">
-                    <a href="#">
+                <% } %>
+                    <a href="customMenu">
                         <i class="menu-icon fa fa-caret-right"></i>
                         自定义菜单
                     </a>
