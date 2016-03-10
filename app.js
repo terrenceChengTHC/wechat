@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 var access = require('./routes/access');
 var admin = require('./routes/admin');
 var web = require('./routes/web');
-var auth = require('./service/auth');
+var auth = require('./service/authService');
 
 var app = express();
 
