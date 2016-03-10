@@ -27,8 +27,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(function (req, res, next) {
     auth(req, res, next);
-    return;
-    next();
 });
 
 //routes

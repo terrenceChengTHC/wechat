@@ -11,6 +11,10 @@ router.get('/login', function (req, res, next) {
     res.render('admin/login',{title:'登录'})
 });
 
+router.get('/loginCheck', function (req, res, next) {
+
+});
+
 router.get('/manage', function (req, res, next) {
     res.render('admin/manage',{title:'系统管理',target:'manage'})
 });
