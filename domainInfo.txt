@@ -1,0 +1,5 @@
+//域表，定义网站中的域的名称 name:CNname
+adminUser:管理员用户
+webUser:网站用户
+account:账号
+password:登陆密码

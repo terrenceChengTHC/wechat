@@ -26,7 +26,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(function (req, res, next) {
-    auth(req, res, next);
+    auth.validate(req, res, next);
 });
 
 //routes
@@ -41,7 +41,6 @@ app.use(function (req, res, next) {
     next(err);
 });
 
-// error handlers
 // production error handler
 // no stacktraces leaked to user
 app.use(function (err, req, res, next) {

@@ -23,5 +23,20 @@ jQuery(function($) {
         $('#id-company-text').attr('class', 'light-blue');
         e.preventDefault();
     });
-
+    $('#loginButton').on('click', function (e) {
+        $.ajax({
+            type: "post",
+            url: "loginCheck",
+            data: {account:$("#account").val(), pwd:$("#password").val()},
+            dataType: "json",
+            success: function(result){
+                if(result.res.cd==1){
+                    alert('登陆成功');
+                }else{
+                    alert(result.res.msg);
+                }
+            }
+        });
+        e.preventDefault();
+    })
 });
