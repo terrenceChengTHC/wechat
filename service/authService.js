@@ -18,7 +18,7 @@ var validate = function (req, res, next) {
 var adminLogin = function (req, res, next, callback) {
     if (req.body.account == 'admin' && req.body.pwd == 'admin') {
         //set login token
-        callback;
+        callback();
         return {cd: 1, msg: "登陆成功"};
     } else {
         return {cd: 0, msg: "登陆失败，用户或密码错误"};
