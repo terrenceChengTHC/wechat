@@ -17,6 +17,8 @@
     "wechat-oauth": "1.1.1",
     "redis": "^0.12.1",
     "mongoose": "^4.0.1",
-    "q": ""
+    "q": "",
+    "cookie":"",
+    "generic-pool":""
   }
 }
