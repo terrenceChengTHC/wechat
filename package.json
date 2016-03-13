@@ -19,6 +19,7 @@
     "mongoose": "^4.0.1",
     "q": "",
     "cookie":"",
-    "generic-pool":""
+    "generic-pool":"",
+    "shortid":""
   }
 }

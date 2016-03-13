@@ -1,3 +1,4 @@
+//redis连接池
 var redis = require('redis');
 var generic_pool = require('generic-pool');
 

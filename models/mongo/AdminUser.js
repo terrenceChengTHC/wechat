@@ -1,12 +1,9 @@
 /**
- * Created by Administrator on 2015/4/15.
  * 管理员对象
  */
 var mongoose = require('mongoose');
 var shortid = require('shortid');
 var Schema = mongoose.Schema;
-
-var AdminGroup = require('./AdminGroup');
 
 var AdminUserSchema = new Schema({
     _id: {
@@ -23,13 +20,7 @@ var AdminUserSchema = new Schema({
     date: { type: Date, default: Date.now },
     logo: { type: String, default: "/upload/images/defaultlogo.png" },
     auth: { type : Boolean ,default :false},
-    group: {
-        type : String,
-        ref : 'AdminGroup'
-
-    }
 });
-
 
 var AdminUser = mongoose.model("AdminUser",AdminUserSchema);
 
