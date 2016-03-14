@@ -13,13 +13,17 @@ router.get('/login', function (req, res, next) {
 });
 
 router.post('/loginCheck', function (req, res, next) {
-    var result = auth.adminLogin(req, res, next, function (token) {
-        //res.cookie('name', req.body.account, {maxAge:600000, httpOnly:true, path:'/', secure:true});
-        //res.cookie('token', '1234567', {maxAge:600000, httpOnly:true, path:'/', secure:true});
-        res.cookie('name', req.body.account);
-        res.cookie('token', token);
-    });
-    res.json({title: '登录', res: result});
+    try {
+        var result = auth.adminLogin(req, res, next, function (token) {
+            //res.cookie('name', req.body.account, {maxAge:600000, httpOnly:true, path:'/', secure:true});
+            //res.cookie('token', '1234567', {maxAge:600000, httpOnly:true, path:'/', secure:true});
+            res.cookie('name', req.body.account);
+            res.cookie('token', token);
+        });
+        res.json({title: '登录', res: result});
+    } catch (err) {
+        console.log(err);
+    }
 });
 
 router.get('/logout', function (req, res, next) {
